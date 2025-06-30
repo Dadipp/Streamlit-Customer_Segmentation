@@ -16,17 +16,15 @@ st.set_page_config(
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/superstore_2.csv", parse_dates=["order_date"])
+    df = pd.read_csv("data/superstore_2.csv", parse_dates=["order_date"])  # ✅ relative path from repo root
     return df
 
 # --- Load Model ---
 @st.cache_resource
 def load_model():
-    with open("models/kmeans_model.pkl", "rb") as f:
+    with open("models/kmeans_model.pkl", "rb") as f:  # ✅ relative path from repo root
         model = pickle.load(f)
-
     return model
-
 
 # Load data dan model
 df = load_data()
