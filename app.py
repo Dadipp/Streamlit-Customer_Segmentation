@@ -69,7 +69,7 @@ if page == "Overview Data":
     st.markdown("Tinjauan umum terhadap data transaksi pelanggan.")
 
     st.dataframe(filtered_df.head(), use_container_width=True)
-
+    st.markdown("---")
     col1, col2, col3 = st.columns(3)
     with col1:
         st.metric("📟 Jumlah Transaksi", filtered_df['order_id'].nunique())
@@ -77,7 +77,7 @@ if page == "Overview Data":
         st.metric("👥 Jumlah Pelanggan", filtered_df['customer_id'].nunique())
     with col3:
         st.metric("💰 Total Penjualan", f"${filtered_df['sales'].sum():,.2f}")
-
+    st.markdown("---")
     sales_trend = filtered_df.groupby('order_date')['sales'].sum().reset_index()
     fig = px.line(sales_trend, x='order_date', y='sales',
                   title="📈 Tren Penjualan Harian",
