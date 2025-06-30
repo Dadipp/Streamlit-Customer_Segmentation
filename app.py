@@ -16,14 +16,15 @@ st.set_page_config(
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/superstore_2.csv", parse_dates=["order_date"])
+    df = pd.read_csv("HANDSON_32B/my_portfolio/Customer_Segmentation/data/superstore_2.csv", parse_dates=["order_date"])
     return df
 
 # --- Load Model ---
 @st.cache_resource
 def load_model():
-    with open("models/kmeans_model.pkl", "rb") as f:
+    with open("HANDSON_32B/my_portfolio/Customer_Segmentation/models/kmeans_model.pkl", "rb") as f:
         model = pickle.load(f)
+
     return model
 
 
