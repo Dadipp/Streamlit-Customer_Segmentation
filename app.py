@@ -22,9 +22,10 @@ def load_data():
 # --- Load Model ---
 @st.cache_resource
 def load_model():
-    with open("E:/VScode/HANDSON_32B/my_portfolio/Customer_Segmentation/models/kmeans_model.pkl", "rb") as f:
+    with open("models/kmeans_model.pkl", "rb") as f:
         model = pickle.load(f)
     return model
+
 
 # Load data dan model
 df = load_data()
