@@ -11,32 +11,54 @@ Dashboard mencakup:
 - Segmentasi berdasarkan demografi (region, country, segment)
 - Segmentasi berdasarkan perilaku pembelian (jumlah transaksi, variasi produk)
 
-> Dataset: `superstore_2.csv`
+📂 Dataset: `superstore_2.csv`  
+👉 [**Buka Aplikasi**](https://app-customer-segmentation.streamlit.app)
 
 ---
 
 ## 📊 Fitur Dashboard
 
-- **Overview Data**: Tinjauan umum jumlah transaksi, pelanggan, penjualan, dan tren harian  
-- **RFM Analysis**: Distribusi recency, frequency, monetary + segmentasi heuristik  
-- **Customer Clustering**: Segmentasi otomatis dengan K-Means berdasarkan RFM  
-- **Demographic Segmentation**: Analisis berdasarkan region, negara, dan tipe pelanggan  
-- **Behavioral Segmentation**: Kategori pembeli berdasarkan jumlah transaksi & produk unik  
-- **Download** hasil segmentasi dalam format CSV  
+- **Overview Data**  
+  - Jumlah transaksi, pelanggan, penjualan total  
+  - Tren penjualan harian
+
+- **RFM Analysis**  
+  - Distribusi nilai *recency*, *frequency*, dan *monetary*  
+  - Segmentasi heuristik berbasis skor RFM
+
+- **Customer Clustering**  
+  - Segmentasi otomatis menggunakan K-Means berdasarkan fitur RFM  
+  - Visualisasi klaster dan interpretasi profil masing-masing klaster
+
+- **Demographic Segmentation**  
+  - Analisis pelanggan berdasarkan region, negara, dan segmen bisnis
+
+- **Behavioral Segmentation**  
+  - Kategori pembeli berdasarkan jumlah transaksi & jumlah produk unik
+
+- **Export Data**  
+  - Unduh hasil segmentasi pelanggan dalam format CSV
 
 ---
 
 ## 💡 Insight
 
-Dashboard memberikan insight seperti:
+Dashboard ini memberikan berbagai insight yang dapat digunakan untuk meningkatkan efektivitas strategi pemasaran dan retensi pelanggan, seperti:
 
-- Klaster dengan **pelanggan paling aktif** (recency rendah)  
-- Klaster dengan **pengeluaran tertinggi** (monetary tinggi)  
-- Segmentasi pelanggan seperti **Loyal Buyer**, **Power Buyer**, dan **Single Purchase**  
+- **Klaster pelanggan aktif**: pelanggan dengan *recency* rendah dan *frequency* tinggi, cocok untuk program loyalitas.
+- **Power buyers**: pelanggan dengan *monetary* tinggi yang berpotensi dijadikan brand ambassador atau VIP customer.
+- **One-time buyers**: pelanggan dengan hanya satu transaksi—perlu pendekatan retargeting atau promosi khusus.
+- **Segmentasi regional**: membantu melihat performa penjualan di tiap negara/region dan menyesuaikan pendekatan lokal.
+- **Analisis variasi produk**: mengidentifikasi pelanggan yang suka beragam produk vs pelanggan yang hanya beli satu jenis produk.
+
+Insight-insight ini dapat digunakan untuk:
+- Menentukan target campaign yang lebih tepat sasaran  
+- Menyesuaikan penawaran produk/layanan berdasarkan profil pelanggan  
+- Meningkatkan customer lifetime value (CLV)
 
 ---
 
 ## ✍️ Author
 
-Created by **[Dimas Adi Prasetyo]**  
+Created by **Dimas Adi Prasetyo**  
 Bootcamp Project – **Customer Analytics and Segmentation**
